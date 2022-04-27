@@ -1,14 +1,8 @@
 package com.luxoft;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-
-import static com.luxoft.Hooks.createDriver;
 
 
 
@@ -51,17 +45,17 @@ public class AppTest {
 
 //        @Given("'home page' page is opened")
 //        public void
-        @When("user go to \"timetable\" page")
-        clickContactLink();
-        @Then("page contains button(.*)$")
-        checkSearchButton1Displayed();
-        checkSearchButton2Displayed();
-        checkSearchButton3Displayed();
-
-
-        public static void getPrint() {
-            System.out.println("test ends");
-        }
-
+//        @When("user go to \"timetable\" page")
+//        clickContactLink();
+//        @Then("page contains button(.*)$")
+//        checkSearchButton1Displayed();
+//        checkSearchButton2Displayed();
+//        checkSearchButton3Displayed();
+//
+//
+//        public static void getPrint() {
+//            System.out.println("test ends");
+//        }
+//
 
 }

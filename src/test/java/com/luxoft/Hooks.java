@@ -1,15 +1,9 @@
 package com.luxoft;
 
-import io.cucumber.java.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.http.W3CHttpCommandCodec;
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
 
@@ -39,7 +33,7 @@ public class Hooks {
 
     public static void OpenURL(String baseURL){
         driver.manage().window().maximize();
-        driver(baseURL);}
+        driver.get(baseURL);}
 
 
 
