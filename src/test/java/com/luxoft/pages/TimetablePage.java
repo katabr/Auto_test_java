@@ -1,5 +1,10 @@
 package com.luxoft.pages;
 
+import org.openqa.selenium.support.ByIdOrName;
+import io.qameta.allure.Step;
+
+import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,19 +15,19 @@ public abstract class TimetablePage extends CommonPage{
 //    @FindBy(xpath = "//a[contains(text(), listButtons)]")
 //    List<WebElement> Buttons;
 
-    @FindBy(xpath = "//a[contains(text(), 'Расписание')]")
-    WebElement LinkTimetable;
-
-
 //    @FindBy(xpath = "//a[contains(text(), 'Расписание')]")
-//    WebElement Button1;
-//
-//    @FindBy(xpath = "//a[contains(text(), 'Бесплатные семинары')]")
-//    WebElement Button2;
-//
-//    @FindBy(xpath = "//a[contains(text(), 'On-line курсы')]")
-//    WebElement Button3;
-//
+//    WebElement LinkTimetable;
+
+
+    @FindBy(xpath = "//a[contains(text(), 'Расписание')]")
+    WebElement Button1;
+
+    @FindBy(xpath = "//a[contains(text(), 'Бесплатные семинары')]")
+    WebElement Button2;
+
+    @FindBy(xpath = "//a[contains(text(), 'On-line курсы')]")
+    WebElement Button3;
+
 //
 //    public TimetablePage(WebDriver driver) {
 //        this.driver = driver;
@@ -54,19 +59,20 @@ public abstract class TimetablePage extends CommonPage{
 ////        }
 ////        return elem;
 ////    }
-//
-//
-//                ArrayList buttons = new ArrayList<>("Расписание", "Бесплатные семинары", "On-line курсы")
-//
-//
-//    public boolean verifyButtons(ArrayList<String> buttons){
-//        List<WebElement> Buttons = driver.findElements(By.xpath("//*[@class='addition-menu']/li/a"));
-//        for(WebElement we:Buttons){
-//            if(!buttons.contains(we.getText()))
-//                return false;
-//        }
-//        return true;
-//    }
+
+
+
+     ArrayList buttons = new ArrayList<>(Button1, Button2, Button3);
+
+
+    public boolean verifyButtons(ArrayList<String> buttons){
+        List<WebElement> Buttons = driver.findElements(FindBy.xpath("//*[@class='addition-menu']/li/a"));
+        for(WebElement we:Buttons){
+            if(!buttons.contains(we.getText()))
+                return false;
+        }
+        return true;
+    }
 }
 
 

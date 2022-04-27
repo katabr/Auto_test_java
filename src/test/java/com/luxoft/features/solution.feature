@@ -18,15 +18,25 @@ Feature: Selenium test task2, task3
       | On-line курсы       |
 
   @tasks3
-  Scenario Outline: verify city on Contacts page
+  Scenario Outline: (Capture) verify city on Contacts page
     //Given "home page" page is opened
     When user go to Contacts page
-    Then page contains city "<City>"
+    Then page contains <City>
     Examples:
       | City            |
       # positive
       | Москва          |
       | Санкт-Петербург |
       | Омск            |
+    Then page does not contain <City>
+
       # negaive
       | Екатеринбург    |
+
+
+  @tasks4
+  Scenario: find course on Catalog page
+  //Given "home page" page is opened
+    When user goes to Catalog page
+    And  user requests SQA-050
+    Then page contains CourseLink

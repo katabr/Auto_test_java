@@ -1,12 +1,21 @@
-//package com.luxoft.steps;
+package com.luxoft.steps;
 
 
 import com.luxoft.pages.HomePage;
+import com.luxoft.pages.TimetablePage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.WebDriver;
 
-//public abstract class StepTimetables extends HomePage {
+import java.util.List;
+
+public abstract class StepTimetables extends HomePage {
+    public StepTimetables(WebDriver driver) {
+        super(driver);
+    }
 
 //    String button = "Расписание";
 //
@@ -24,28 +33,29 @@ import io.qameta.allure.Step;
 //
 //    private HomePage homePage = new HomePage(auxillary.getDriver().get());
 
-//    @Given("Home page {string} is opened")
-//    @Step("Page {string} is opened")
-//    public void home_page_is_opened(String arg0) {
-//    }
+    @Given("Home page {string} is opened")
+    @Step("Page {string} is opened")
+    public void home_page_is_opened(String arg0) {
+    }
 
-//    @When("User go to Timetable page")
-//    @Step("Click timetable link")
-//    @Override
-//    public void clickTimetableLink(){
-//        super.clickTimetableLink();
-//    };
+    @When("User go to Timetable page")
+    @Step("Click timetable link")
+    @Override
+    public void clickTimetableLink(){
+        super.clickTimetableLink();
+    };
 //    public void TimetablePage.GoToTimetablePage();
 
 //    public HomePage LinkTimetable(){
 //        LinkTimetable.click();
 //
 //    }
-//    @Then("^Page contains button (.*)$")
-//    @Step("Check able buttons (?:Расписание|Бесплатные семинары|On-line курсы)")
-//    public void main_menu_contain(List<String> buttons) {
-//        Assertions.assertTrue(TimetablePage.verifyButtons(buttons));
-//    }
+   //@Then("^Page contains button (.*)$")
+    @Then ("Page contains button Button")
+    @Step("Check able buttons (?:Расписание|Бесплатные семинары|On-line курсы)")
+    public void main_menu_contain(List<String> buttons) {
+        Assertions.assertTrue(TimetablePage.verifyButtons(buttons));
+    }
 
 
 
@@ -62,4 +72,4 @@ import io.qameta.allure.Step;
 //    public void checkSearchButton3Displayed(){
 //        assertThat(Button3.isDisplayed(), equalTo(true));
 
-//}
+}

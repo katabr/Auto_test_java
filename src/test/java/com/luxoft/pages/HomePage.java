@@ -16,12 +16,31 @@ public abstract class HomePage extends CommonPage{
     @FindBy(linkText = "Расписание")
     WebElement timeTablePage;
 
-//    protected HomePage() {
-//    }
-
-    // Перейти на страницу Расписание
+    // Перейти на страницу Контакты
     public void clickTimetableLink(){
         timeTablePage.click(); }
+
+    @FindBy(linkText = "Контакты")
+    WebElement ContactPage;
+
+    // Перейти на страницу Расписание
+    public void clickContactLink(){
+        ContactPage.click(); }
+
+
+
+//    @FindBy(name = "qcat")
+//    WebElement SearchField;
+//
+//
+//    // Ввести в поле поиска SQA-050
+//    public void sendKeysNameCourse(){
+//        SearchField.click();
+//        SearchField.clear();
+//        SearchField.sendKeys("SQA-050");
+//    }
+
+
 
 
 
@@ -104,10 +123,6 @@ public abstract class HomePage extends CommonPage{
 //        return true;
 //    }
 //
-//    @Step("click contact link")
-//    public HomePage clickContactLink(){
-//        contactLink.click();
-//        return this;
 //    }
 //
 

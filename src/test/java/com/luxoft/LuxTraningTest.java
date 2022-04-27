@@ -1,18 +1,13 @@
 package com.luxoft;
 
 //package com.luxoft.web;
-import com.luxoft.pages.HomePage;
-import com.luxoft.pages.SetUp;
-import org.junit.jupiter.api.*;
+
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.Arrays;
 
 
 //public class LuxTraningTest extends SetUp  {
@@ -64,7 +59,7 @@ public class LuxTraningTest {
 
     @Test
     void testSearch(){
-        driver.get ("https://www.luxoft-training.ru/");
+        driver.get ("https://www.google.com/");
         WebElement search = driver.findElement(By.linkText("Расписание"));
         search.click();
     }
