@@ -1,0 +1,74 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-26T23:05:26.619Z",
+        "line": 5,
+        "name": "verify buttons on timetable page",
+        "description": "",
+        "id": "selenium-test-task2;verify-buttons-on-timetable-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user go to \"timetable\" page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999400,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "page contains button",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "Расписание"
+                ]
+              },
+              {
+                "cells": [
+                  "Бесплатные семинары"
+                ]
+              },
+              {
+                "cells": [
+                  "On-line курсы"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@task2"
+          }
+        ]
+      }
+    ],
+    "name": "Selenium test task2",
+    "description": "",
+    "id": "selenium-test-task2",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/luxoft/features/solution.feature",
+    "tags": [
+      {
+        "name": "@task2",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
